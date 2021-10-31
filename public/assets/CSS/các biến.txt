@@ -1,0 +1,33 @@
+font bình thường :14.4px.
+font icon : 20px.
+font nhỏ : 14px.#
+font giảm giá :16px
+$size-text-1:1.44rem;
+$size-text-2:1.4rem;
+$size-text-3:1.6rem;
+$size-text-4:1.08rem;
+font-family bt : roboto.
+font-family kiểu: robotoslab.
+font kiểu đồng hồ 10.8px
+
+color:
+màu trắng 1 #ffffff
+màu trắng 2: #fff
+màu trắng 3 : #A4A4A4
+
+màu vàng: #e2ba48
+màu đen 1 #3C3451
+màu đen 2 #353535
+màu đen 3 #1C1C1C
+màu đen 4 #767676
+
+header__height: 70px
+h2{font-size: 3.2rem;}
+h3{font-size: 2rem;}
+h4{font-size: 1.725rem;}
+
+buy-cart-width:294px
+max-height 532px
+
+ic nguồn nguồn kích
+k có tín hiệu

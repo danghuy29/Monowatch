@@ -1,0 +1,160 @@
+h2 {
+  font-size: 3.2rem; }
+
+h3 {
+  font-size: 2rem; }
+
+h4 {
+  font-size: 1.725rem; }
+
+.tab-container {
+  margin-left: 32px;
+  margin-top: 32px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid #dddddd; }
+  .tab-container ul.title-list {
+    list-style-type: none;
+    display: flex; }
+    .tab-container ul.title-list li.tab-title {
+      height: 42px;
+      padding: 14px 16px;
+      font-size: 1.6rem;
+      margin-right: 4px;
+      border-top: 2px solid #1C1C1C;
+      border-left: 1px solid #767676;
+      border-right: 1px solid #767676;
+      cursor: pointer;
+      opacity: .4;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: #433b34;
+      background-color: #f5f5f5; }
+    .tab-container ul.title-list li.tab-title.active {
+      opacity: 1;
+      background-color: #fff;
+      position: relative; }
+      .tab-container ul.title-list li.tab-title.active::before {
+        content: "";
+        width: 100%;
+        height: 20px;
+        background-color: #fff;
+        position: absolute;
+        bottom: -10px;
+        left: 0; }
+  .tab-container .tab-content {
+    border: 1px solid #767676;
+    padding: 40px 32px; }
+    .tab-container .tab-content .content {
+      display: none; }
+    .tab-container .tab-content .content.active {
+      display: block; }
+    .tab-container .tab-content .info-item {
+      display: flex;
+      padding: 20px 0;
+      border-bottom: 1px solid #ececec; }
+      .tab-container .tab-content .info-item h1 {
+        width: 50%;
+        font-size: 1.44rem;
+        text-transform: uppercase;
+        font-weight: 550; }
+      .tab-container .tab-content .info-item p {
+        width: 50%;
+        font-size: 1.44rem;
+        text-transform: capitalize; }
+    .tab-container .tab-content .baohanh-content {
+      font-size: 1.6rem;
+      color: #000000;
+      margin-bottom: 34px; }
+    .tab-container .tab-content .rate-container h1 {
+      margin-bottom: 24px;
+      font-size: 2rem;
+      color: #1C1C1C; }
+    .tab-container .tab-content .rate-container p {
+      margin-bottom: 56px;
+      font-size: 1.6rem;
+      color: #1C1C1C; }
+    .tab-container .tab-content .rate-container .rate-section {
+      border: 2px solid #000000;
+      padding: 26px 32px; }
+      .tab-container .tab-content .rate-container .rate-section h1 {
+        line-height: 1.8;
+        letter-spacing: 1.1px;
+        color: #1C1C1C; }
+      .tab-container .tab-content .rate-container .rate-section p {
+        margin-bottom: 12px;
+        color: #1C1C1C;
+        font-weight: 530; }
+      .tab-container .tab-content .rate-container .rate-section ul.rate-star {
+        margin-bottom: 12px; }
+      .tab-container .tab-content .rate-container .rate-section textarea,
+      .tab-container .tab-content .rate-container .rate-section input {
+        outline: none;
+        border: 1px solid #ddd;
+        box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px; }
+      .tab-container .tab-content .rate-container .rate-section textarea.comment {
+        height: 132px;
+        width: 100%;
+        padding: 16px 12px;
+        font-size: 1.7rem;
+        overflow: auto; }
+      .tab-container .tab-content .rate-container .rate-section label {
+        display: block;
+        margin-bottom: 12px;
+        color: #1C1C1C;
+        font-size: 1.6rem;
+        font-weight: 530; }
+      .tab-container .tab-content .rate-container .rate-section .form-group {
+        display: flex;
+        justify-content: space-between; }
+        .tab-container .tab-content .rate-container .rate-section .form-group .name-section,
+        .tab-container .tab-content .rate-container .rate-section .form-group .email-section {
+          width: 48%; }
+          .tab-container .tab-content .rate-container .rate-section .form-group .name-section input,
+          .tab-container .tab-content .rate-container .rate-section .form-group .email-section input {
+            width: 100%;
+            height: 48px;
+            padding: 0 12px;
+            font-size: 1.7rem; }
+      .tab-container .tab-content .rate-container .rate-section textarea:focus,
+      .tab-container .tab-content .rate-container .rate-section input:focus {
+        box-shadow: 0 0 5px #ccc; }
+      .tab-container .tab-content .rate-container .rate-section button.submit-btn {
+        background-color: #000000;
+        color: #fff;
+        width: 84px;
+        height: 40px;
+        line-height: 40px;
+        border: none;
+        outline: none;
+        font-weight: 530;
+        font-size: 1.6rem;
+        cursor: pointer;
+        opacity: .9; }
+        .tab-container .tab-content .rate-container .rate-section button.submit-btn:hover {
+          opacity: 1; }
+
+@media (max-width: 740px) {
+  .tab-container {
+    margin: 0;
+    padding: 0 8px; }
+    .tab-container ul.title-list li.tab-title {
+      height: unset;
+      text-align: center; }
+      .tab-container ul.title-list li.tab-title:last-child {
+        margin-right: 0; }
+    .tab-container .tab-content {
+      padding: 40px 20px; }
+      .tab-container .tab-content .info-item:first-child {
+        padding-top: 0; }
+      .tab-container .tab-content .rate-container p {
+        margin-bottom: 28px; }
+      .tab-container .tab-content .rate-container .rate-section {
+        padding: 26px 16px; }
+        .tab-container .tab-content .rate-container .rate-section .form-group {
+          flex-direction: column; }
+          .tab-container .tab-content .rate-container .rate-section .form-group .name-section,
+          .tab-container .tab-content .rate-container .rate-section .form-group .email-section {
+            width: 100%; } }
+
+/*# sourceMappingURL=tabinfo.css.map */

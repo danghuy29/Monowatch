@@ -1,0 +1,78 @@
+.slider-container {
+  cursor: grab; }
+  .slider-container .row {
+    display: flex;
+    align-items: center; }
+    .slider-container .row .watch {
+      border: 1px dashed #353535;
+      min-height: 320px; }
+      .slider-container .row .watch .watch-sale {
+        margin-top: 10px;
+        padding: 2px; }
+      .slider-container .row .watch .watch-add-to-cart {
+        top: 50%; }
+      .slider-container .row .watch .watch-info {
+        padding-left: 0;
+        padding-right: 0; }
+        .slider-container .row .watch .watch-info .watch-price {
+          display: flex;
+          flex-direction: column; }
+      .slider-container .row .watch:hover {
+        border: 1px dashed #353535; }
+    .slider-container .row .previous-btn {
+      left: -20px;
+      animation: btn-left-float-in 1s; }
+    .slider-container .row .next-btn {
+      right: 0;
+      animation: btn-right-float-in 1s; }
+    .slider-container .row .previous-btn,
+    .slider-container .row .next-btn {
+      z-index: 1;
+      height: 60%;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      display: none;
+      opacity: 0.6; }
+    .slider-container .row:hover .next-btn,
+    .slider-container .row:hover .previous-btn {
+      display: flex; }
+      .slider-container .row:hover .next-btn:hover,
+      .slider-container .row:hover .previous-btn:hover {
+        opacity: 1; }
+  .slider-container .l-3 {
+    max-width: 90%;
+    flex: 0 0 24%; }
+
+@keyframes btn-right-float-in {
+  from {
+    transform: translateX(-50%); }
+  to {
+    transform: translateX(0%); } }
+@keyframes btn-left-float-in {
+  from {
+    transform: translateX(50%); }
+  to {
+    transform: translateX(0%); } }
+@media (max-width: 1023px) {
+  .slider-container .row .previous-btn,
+  .slider-container .row .next-btn {
+    display: flex; } }
+@media (max-width: 740px) {
+  .slider-container {
+    cursor: grab; }
+    .slider-container .watch button.watch-add-to-cart {
+      font-size: 2.5rem;
+      top: 50%;
+      margin-left: 6px; } }
+@media (min-width: 1024px) and (max-width: 1239px) {
+  .slider-container {
+    cursor: grab; }
+    .slider-container .row .watch button.watch-add-to-cart {
+      font-size: 2.5rem;
+      top: 40%; }
+    .slider-container .row .previous-btn,
+    .slider-container .row .next-btn {
+      display: flex; } }
+
+/*# sourceMappingURL=itemslider.css.map */

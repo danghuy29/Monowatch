@@ -1,0 +1,215 @@
+$size-text-1:1.44rem;
+$size-text-2:1.4rem;
+$size-text-3:1.6rem;
+$size-text-4:1.08rem;
+$size-text-5:1.7rem;
+$size-icon:2rem;
+$size-text-6:1.3rem;
+$size-menu-toogle: 3rem;
+// các biến về size 
+$color-white1:#ffffff;
+$color-white2:#fff;
+$color-white3:#4A4A4A;
+$color-black1:#3C3451;
+$color-black2:#353535;
+$color-black3:#1C1C1C;
+$color-black4:#767676;
+$color-black5:#000000;
+$color-text-menu:#848484;
+$color-yellow:#e2ba48;
+$color-menu-bar:#f8f8f8;
+$color-router:#dbe2ea;
+$color-border:#dddddd;
+//  các biến về màu 
+$header-height:90px;
+$header-height-mini:70px;
+$search-width:600px;
+$search-height:92px;
+$search-input-width:558px;
+$search-input-height:38px;
+$buy-section-width:294px;
+$buy-btn-height:40px;
+$modal-shop-width:320px;
+// các biến về khoảng cách 
+h2{font-size: 3.2rem;}
+h3{font-size: 2rem;}
+h4{font-size: 1.725rem;}
+.spacing-bottom{
+    position: relative;
+    padding-bottom:20px;
+    margin-bottom: 20px;
+    &::before{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        height: 2px;
+        width: 38px;
+        background-color: $color-black2;
+        opacity: .7;
+    }
+}
+.main-info{
+    margin-left: 32px;
+    border-bottom: 1px solid $color-border;
+    .imgBx{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img{
+            width: 100%;
+        }
+    }
+    .infoBx{
+        .router{
+            margin-bottom: 12px;
+            a,span{
+                font-size: $size-text-1;
+                text-decoration: none;
+                margin: 0 4px;
+                color: $color-black2;
+                text-transform: uppercase;
+                opacity: .8;
+            }
+            a{
+                &:hover{
+                    color: $color-yellow;
+                    opacity: 1; 
+                }
+            }
+         
+        }
+        .watch-name{
+            h2{
+                font-family: "roboto",sans-serif;
+                font-weight: 500;
+                opacity: .9;
+            }
+        }
+        .watch-price{
+            h3{
+                font-weight: 400;
+                color: $color-black3;
+                span{
+                    margin-right: 6px;
+                    opacity: .7;
+                    text-decoration: line-through;
+                }
+            }
+            margin-bottom: 20px;
+        }
+        .watch-des{
+            margin-bottom: 20px;
+            p{
+                font-size: $size-text-5 ;
+                line-height: 26px;
+            }
+        }
+        .watch-btn{
+            display: flex;
+            margin-bottom: 40px;
+            .watch-quantity{
+                margin-right: 22px;
+                button{
+                    width: 25px;
+                    height: 40px;
+                    font-size: $size-text-2;
+                    border: 1px solid #dddddd;
+                    cursor: pointer;
+                    
+                    background-color: #f9f9f9;
+                    &:hover{
+                        background-color: #dddddd;
+                    }
+                    &:active{
+                        border:none;
+                        outline: none;
+                        opacity: .8;
+                    }
+                }
+                .quantity-value{
+                    width: 50px;
+                    height: 40px;
+                    outline: none;
+                    
+                    border-top: 1px solid #dddddd; ;
+                    border-bottom:   1px solid #dddddd;
+                    border-left: none;
+                    border-right: none;
+
+                    font-size: $size-text-3;
+                    text-align: center;
+                    box-shadow:  inset 0 1px 2px rgba($color: #000000, $alpha: 0.1);
+
+                    &::-webkit-outer-spin-button,
+                    &::-webkit-inner-spin-button{
+                        -webkit-appearance: none;
+                        margin: 0;
+                    }
+                }
+            }
+            .add-to-cart-btn{
+                width: 160px;
+                height: 40px;
+               button{
+                    width: 100%;
+                    height: 100%;
+                    line-height: 40px;
+                    background-color: $color-yellow;
+
+                    outline: none;
+                    border: none;
+
+                    font-size: $size-text-5;
+                    color: $color-white1;
+                    font-weight: 600;
+                    text-align: center;
+                    text-transform: uppercase;
+                    cursor: pointer;
+
+                    &:hover{
+                        background-color: #b5953a;
+                        &:active{
+                            opacity: .8;
+                        }
+                    }
+               }
+            }
+        }
+        .watch-id{
+            padding: 6px 0;
+            font-size: $size-text-6;
+            border-top: 1px dotted $color-black4;
+            border-bottom: 1px dotted $color-black4;
+        }
+        .watch-type{
+            padding: 6px 0;
+            font-size: $size-text-6;
+            a{
+                text-decoration: none;
+                color:$color-black5;   
+                &:hover{
+                    color: $color-yellow;
+                }             
+            }
+            margin-bottom: 48px;
+        }
+    }
+}
+
+
+
+@media (max-width:740px) {
+.main-info{
+     margin: 0 20px;
+    //  padding: 0 20px;
+    .watch-btn{
+        justify-content: space-between;
+    }
+}   
+}
+// Reponsive trên mobile
+
+

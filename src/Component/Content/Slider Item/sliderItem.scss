@@ -1,0 +1,109 @@
+
+.slider-item-section{
+    padding-top: 60px;
+    .slider-container{
+        cursor: grab;
+        position: relative;
+       .slick-slider{
+           position: unset;
+           display: flex;
+           align-items: center;
+       }
+       .previous-btn{
+        left: 28px;
+        animation: btn-left-float-in 1s;
+        }
+        .next-btn{
+            right: 28px;
+            animation: btn-right-float-in 1s;
+        }
+        .next-btn,
+        .previous-btn{
+          display: none;
+            opacity: 0.6;
+        }
+        &:hover{
+            .next-btn,
+            .previous-btn{
+            display: block;
+            &:hover{
+                opacity: 1;
+            }
+        }
+        }
+    }
+}
+@keyframes btn-right-float-in{
+    from{
+        transform: translateX(-50%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+}
+@keyframes btn-left-float-in{
+    from{
+        transform: translateX(50%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+}
+@media (max-width: 1023px){
+    .slider-container{
+        &:hover{
+            .previous-btn,
+            .next-btn{
+                display: none!important;
+                // visibility: hidden;
+            }
+        }   
+        .previous-btn,
+        .next-btn{
+          display: none!important;
+        } 
+    }
+}
+//Reponsive trên mobile và tablet
+
+@media (max-width:740px) {
+    .c-6{
+        max-width: unset;
+    }
+}
+// Reponsive trên mobile
+
+@media (min-width: 740px) and (max-width: 1023px) {
+    .m-4{
+        max-width: unset;
+    }
+}
+//Reponsive trên tablet
+
+@media (min-width: 1024px) and (max-width: 1239px) {
+    .wide{
+        .l-3{
+            max-width: unset;
+        }
+    }
+    .slider-container{
+        &:hover{
+            .previous-btn,
+            .next-btn{
+               display: none!important;
+            }
+        }
+        .previous-btn,
+        .next-btn{
+          display: none!important;
+        }
+        
+    }
+ 
+}
+@media (min-width:1113px) {
+    .l-3{
+        max-width: unset;
+    }
+}
+//Trên PC

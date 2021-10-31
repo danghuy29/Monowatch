@@ -1,0 +1,66 @@
+@media (max-width: 1023px){
+    .hidden-on-mobile-tablet{
+        display: none;
+    }
+    .menubar-mobile{
+        display: flex!important;
+    }
+}
+//Reponsive trên mobile và tablet
+
+@media (max-width:740px) {
+    .modal {
+        .modalShop-container{
+            .buy-list{
+                .buy-item{
+                    .item-info{
+                        align-items: flex-start;
+                    }
+                }
+            }
+            .buybtn-section{
+                .buy-btn{
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }   
+    .header{
+        padding: 0 8px;
+    }
+  
+}
+// Reponsive trên mobile
+
+@media (min-width: 740px) and (max-width: 1023px) {
+    .container {
+        margin: 0 -35px;
+    }
+    .modal{
+        .modalShop-container{
+             width: 50%;
+        }
+    }
+}
+//Reponsive trên tablet
+
+@media (min-width: 1024px) and (max-width: 1239px) {
+    .hidden-on-large-tablet{
+        display: none;
+    }
+    .modal{
+        .modalShop-container{
+             width: 50%;
+        }
+    }
+    .menubar-mobile{
+        display: flex!important;
+    }
+}
+@media (min-width:1239px){
+    .hidden-on-PC{
+        display: none;
+    }
+}
+
+//Trên PC

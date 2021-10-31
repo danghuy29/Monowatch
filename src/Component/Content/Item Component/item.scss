@@ -1,0 +1,252 @@
+$fontwithstyle:'Roboto Slab', serif;
+$size-text-1:1.44rem;
+$size-text-2:1.4rem;
+$size-text-3:1.6rem;
+$size-text-4:1.08rem;
+$size-text-5:1.7rem;
+$size-icon:2rem;
+$size-sale-icon:2.6rem;
+$size-menu-toogle: 3rem;
+$size-bn-icon: 5rem;
+$size-text-banner: 4rem;
+// các biến về size 
+$color-white1:#ffffff;
+$color-white2:#fff;
+$color-white3:#4A4A4A;
+$color-black1:#3C3451;
+$color-black2:#353535;
+$color-black3:#1C1C1C;
+$color-black4:#767676;
+$color-black5:#000000;
+$color-text-menu:#848484;
+$color-yellow:#e2ba48;
+$color-menu-bar:#f8f8f8;
+//  các biến về màu 
+$header-height:90px;
+$header-height-mini:70px;
+$search-width:600px;
+$search-height:92px;
+$search-input-width:558px;
+$search-input-height:38px;
+$buy-section-width:294px;
+$buy-btn-height:40px;
+$modal-shop-width:320px;
+.watch{
+    position: relative;
+    margin: 15px 0 ;
+    .watch-img{
+        overflow:hidden;
+        img{
+            width: 100%;
+            transition: 0.4s
+        }
+        ;
+    }
+    .watch-info{
+        padding: 10px 10px 20px 10px;
+        text-align: center;
+        .watch-type{
+            font-size: $size-text-1;
+            font-weight: 300;
+            text-transform: uppercase;
+        }
+        .watch-name{
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            display: -webkit-box;
+            a{
+                font-size: $size-text-5;
+                color: $color-black3;
+                text-decoration: none;
+                font-weight: 600;
+            }
+            margin-bottom: 15px;
+        }
+        .watch-price{
+            font-size: $size-text-3;
+            font-weight: bold;
+            span{
+                text-decoration: line-through;
+                font-weight: 500;
+                opacity: 0.6;
+            }
+        }
+    }
+    .watch-sale{
+        position: absolute;
+        top:0;
+        left: 0;
+        margin-top: 30px;
+        margin-left: 8px;
+
+        color:$color-black2;
+        font-size: $size-icon;
+        color: $color-white1;
+        font-weight: bold;
+        background-color: $color-yellow;
+       
+        border-radius: 50%;
+        padding: 8px;
+        line-height: 210%;
+        
+    }
+    .watch-add-to-cart{
+        position: absolute;
+        left: 0;
+        top: 60%;
+        margin-left: 10px;
+             
+        font-size: $size-menu-toogle;
+        border: none;
+        background-color: #fff;
+        color: #000;
+
+        display: NONE;
+        opacity: 0.6;
+       i{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       }
+
+        // display: none;
+        animation: addFloatIn 0.4s;
+        transition: 0.4s;
+    }
+    &:hover{
+        border: 1px dashed #353535;
+        .watch-img{
+            img{
+                transform: scale(1.05) ;
+            }
+        }
+        .watch-name{
+            &:hover{
+                a{
+                    color: $color-yellow;
+                }
+            }
+        }
+        .watch-add-to-cart{
+            display: block;
+            &:hover{
+                opacity: 1;
+                cursor: pointer;
+            }
+            &:active{
+                i{
+                    background-color: #000;
+                    color: #fff;
+
+                }
+            }
+        }
+       
+    }
+}
+
+@keyframes addFloatIn {
+    from{
+        transform: translateY(50%);
+    }
+    to{
+        transform: translateY(0%);
+    }
+}
+@media (max-width:740px) {
+    .watch{
+                  .watch-info{
+                      text-align: center;
+                      padding-left:20px;
+                      padding-right:20px;
+                      .watch-name{
+                          a{
+                              font-size: $size-text-2;
+                          }
+                          margin-top: 2px;
+                        margin-bottom: 2px;
+                      }
+                      .watch-price{
+                          display: flex;
+                          flex-direction: column;
+                      }
+                  }
+                  .watch-sale{
+                      font-size:$size-text-4;
+                      padding:0;
+                      margin-left: 12px;
+                  }  
+                  .watch-add-to-cart{
+                      top:40%;
+                      display:block;
+                      margin-left: 12px;
+                  }
+                  &:hover{
+                      border: none;
+                  }
+    }           
+  }
+  // Reponsive trên mobile
+  
+  @media (min-width: 740px) and (max-width: 1023px) {
+              .watch{
+                  .watch-info{
+                      text-align: center;
+                      .watch-name{
+                          a{
+                              font-size: $size-text-2;
+                          }
+                          margin-top: 2px;
+                        margin-bottom: 2px;
+                      }
+                  }
+                  .watch-sale{
+                      font-size: $size-text-5;
+                      padding:2px;
+                      margin-top: 15px;
+                      margin-left: 12px;
+                  }  
+                  .watch-add-to-cart{
+                      top:50%;
+                      display:block;
+                      margin-left: 12px;
+                  }
+                  &:hover{
+                      border: none;
+                  }
+              } 
+           
+  
+  }
+  //Reponsive trên tablet
+  
+  @media (min-width: 1024px) and (max-width: 1239px) {
+        .hidden-on-large-tablet{
+          display: none;
+        }
+        .watch{
+            .watch-info{
+                text-align: center;
+            }
+            .watch-sale{
+                      font-size:$size-text-1;
+                      padding:0;
+            }  
+            .watch-add-to-cart{
+                      top:40%;
+                      display:block;
+            }
+            &:hover{
+                      border: none;
+            }
+        }        
+  }
+  @media (min-width:1239px){
+      .hidden-on-PC{
+          display: none;
+      }
+  
+  }

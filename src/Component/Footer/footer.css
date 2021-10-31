@@ -1,0 +1,129 @@
+h2 {
+  font-size: 4rem;
+  font-family: 'Roboto Slab', serif; }
+
+h3 {
+  font-size: 2rem; }
+
+h4 {
+  font-size: 1.725rem; }
+
+#footer .footer-content {
+  display: flex;
+  flex-direction: row;
+  padding-top: 38px;
+  background-color: #000000; }
+  #footer .footer-content .row {
+    margin: 0;
+    width: 100%; }
+    #footer .footer-content .row .link-to {
+      padding: 32px 20px 32px 20px;
+      color: #ffffff;
+      text-align: center;
+      opacity: 0.9; }
+    #footer .footer-content .row .main-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      border-left: 1px dashed #2e2e2e;
+      border-right: 1px dashed #2e2e2e; }
+      #footer .footer-content .row .main-content .logo-section {
+        width: 148px;
+        padding: 30px 0 24px 0; }
+        #footer .footer-content .row .main-content .logo-section img {
+          width: 100%; }
+      #footer .footer-content .row .main-content .content-text {
+        color: #767676;
+        font-size: 1.4rem;
+        max-width: 80%; }
+      #footer .footer-content .row .main-content .email-section {
+        width: 70%;
+        height: 46px;
+        margin: 50px 0 50px 0;
+        line-height: 46px;
+        padding-left: 28px;
+        border-radius: 46px;
+        display: flex;
+        justify-content: space-between;
+        background-color: #f8f8f8; }
+        #footer .footer-content .row .main-content .email-section input {
+          width: 90%;
+          height: 100%;
+          font-size: 1.6rem;
+          background-color: transparent;
+          outline: none;
+          border: none; }
+        #footer .footer-content .row .main-content .email-section .submit-btn {
+          width: 46px;
+          height: 46px;
+          border-radius: 46px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer; }
+          #footer .footer-content .row .main-content .email-section .submit-btn i {
+            font-size: 2.6rem;
+            color: #000000;
+            opacity: .8; }
+          #footer .footer-content .row .main-content .email-section .submit-btn:hover {
+            background-color: #cccccc; }
+    #footer .footer-content .row .shop-info {
+      padding: 32px 20px 32px 20px; }
+      #footer .footer-content .row .shop-info h3 {
+        color: #ffffff;
+        margin-bottom: 13px; }
+      #footer .footer-content .row .shop-info p {
+        color: #767676;
+        font-size: 1.6rem;
+        line-height: 1.5;
+        margin: 13px 0; }
+      #footer .footer-content .row .shop-info a {
+        color: #767676;
+        font-size: 1.6rem;
+        text-decoration: none;
+        margin: 13px 0;
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis; }
+#footer .copy-right-section {
+  width: 100%;
+  height: 48px;
+  background-color: #000000;
+  color: #767676;
+  text-align: center;
+  line-height: 48px; }
+  #footer .copy-right-section p {
+    font-size: 1.4rem;
+    display: inline-block; }
+  #footer .copy-right-section span {
+    width: 26px;
+    display: inline-block;
+    padding: 0 2px; }
+    #footer .copy-right-section span img {
+      width: 100%;
+      transform: translateY(6px); }
+  #footer .copy-right-section a {
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: #767676;
+    font-weight: 600; }
+    #footer .copy-right-section a:hover {
+      color: #fff; }
+
+@media (max-width: 1023px) {
+  .hidden-on-mobile-tablet {
+    display: none; } }
+@media (max-width: 740px) {
+  #footer .footer-content {
+    padding: 0; }
+    #footer .footer-content .row .main-content {
+      border-top: 1px dashed #2e2e2e;
+      border-bottom: 1px dashed #2e2e2e; }
+    #footer .footer-content .row .shop-info {
+      text-align: center; } }
+@media (min-width: 740px) and (max-width: 1023px) {
+  #footer .footer-content .row .shop-info {
+    padding: 32px 10px 32px 20px; } }
+
+/*# sourceMappingURL=footer.css.map */

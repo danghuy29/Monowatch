@@ -1,0 +1,13 @@
+.product-container {
+  margin: 40px auto; }
+  .product-container .right-section {
+    border-left: 1px solid #dddddd; }
+    .product-container .right-section .related-product {
+      margin-left: 32px;
+      padding: 32px 0; }
+      .product-container .right-section .related-product h3 {
+        color: #1C1C1C;
+        text-transform: uppercase;
+        margin-bottom: 32px; }
+
+/*# sourceMappingURL=product.css.map */

@@ -1,0 +1,145 @@
+@media (max-width: 1023px){
+    .hidden-on-mobile-tablet{
+        display: none;
+    } 
+}
+//Reponsive trên mobile và tablet
+
+@media (max-width:740px) {
+  #content{
+    .banner1{
+        .banner1-container{
+            display: flex;
+            flex-direction: column;
+            padding: 36px 0 30px 0;
+            .bn-content{
+                margin-bottom: 24px;
+            }
+           }
+    }
+    .banner2{
+        display: flex;
+        flex-direction: column;
+        .banner-container{
+            width: 100%;
+            height: 210px;
+            .banner-text-section{
+               padding: 12px;
+               width: 50%;
+                strong{
+                    line-height: 1.1;
+                    margin-bottom: 12px;
+                    font-size: 3rem;
+                }
+                h4{
+                    margin-bottom: 12px;
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    }
+} 
+}
+// Reponsive trên mobile
+
+@media (min-width: 740px) and (max-width: 1023px) {
+    #content{ 
+        .banner1{
+            .banner1-container{
+                display: flex;
+                padding: 76px 0 70px 0;
+                .bn-content{
+                    margin-bottom: 36px;
+                    display: flex;
+                    flex-direction: column;
+
+                    .bn-content-text{
+                        text-align: center;
+                        div{
+                            min-height: 50px;
+                        }
+                    }
+                }
+               }
+        }
+        .banner2{
+            display: flex;
+            .banner-container{
+                width: 100%;
+                height: 182px;
+                .banner-text-section{
+                    padding-right: 16px;
+                    width: 44%;
+                    strong{
+                        margin-bottom: 12px;
+                        font-size: 2.6rem;
+                    }
+                    h4{
+                        margin-bottom: 12px;
+                        font-size: 1.1rem;
+                    }
+                    .detail-btn{
+                        width: 90px;
+                        height: 36px;
+
+                        border: 2px solid $color-yellow;
+    
+                        text-decoration: none;
+                        font-size: $size-text-2;
+                        font-weight: 600;
+                        
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+    
+                        transition: 0.3s;                                      
+                        &:hover{
+                            background-color: $color-yellow;
+                            color: $color-menu-bar;            
+                        }
+                    }
+                }
+                .banner-img-section.left{
+                    width: 100%;
+                    height: 100%;
+                   background-image: url(./banner/bg-banner-2-1.jpg); 
+                   background-size: 100% 100%;
+                }
+                .banner-img-section.right{
+                    width: 100%;
+                    height: 100%;
+                    
+                    background-image: url(./banner/bg-banner-2-2.jpg);
+                    background-size: 100% 100%;
+                }
+            }
+        }
+    } 
+
+}
+//Reponsive trên tablet
+
+@media (min-width: 1024px) and (max-width: 1239px) {
+    .hidden-on-large-tablet{
+        display: none;
+    }
+    #content{
+       .banner2{
+        .banner-container{
+            .banner-text-section{
+                padding-right: 16px;
+                width: 48%;
+            }
+        }
+    }
+    } 
+  
+}
+@media (min-width:1239px){
+    .hidden-on-PC{
+        display: none;
+    }
+
+}
+
+//Trên PC

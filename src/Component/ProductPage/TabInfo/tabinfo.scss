@@ -1,0 +1,298 @@
+$size-text-1:1.44rem;
+$size-text-2:1.4rem;
+$size-text-3:1.6rem;
+$size-text-4:1.08rem;
+$size-text-5:1.7rem;
+$size-icon:2rem;
+$size-text-6:1.3rem;
+$size-menu-toogle: 3rem;
+// các biến về size 
+$color-white1:#ffffff;
+$color-white2:#fff;
+$color-white3:#4A4A4A;
+$color-black1:#3C3451;
+$color-black2:#353535;
+$color-black3:#1C1C1C;
+$color-black4:#767676;
+$color-black5:#000000;
+$color-text-menu:#848484;
+$color-yellow:#e2ba48;
+$color-menu-bar:#f8f8f8;
+$color-router:#dbe2ea;
+//  các biến về màu 
+$header-height:90px;
+$header-height-mini:70px;
+$search-width:600px;
+$search-height:92px;
+$search-input-width:558px;
+$search-input-height:38px;
+$buy-section-width:294px;
+$buy-btn-height:40px;
+$modal-shop-width:320px;
+// các biến về khoảng cách 
+h2{font-size: 3.2rem;}
+h3{font-size: 2rem;}
+h4{font-size: 1.725rem;}
+
+.tab-container{
+    margin-left: 32px;
+    margin-top: 32px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid #dddddd;
+    ul.title-list{
+        list-style-type: none;
+        display: flex;
+        li.tab-title{
+            height: 42px;
+            padding: 14px 16px;
+            font-size: $size-text-3;
+            margin-right: 4px;
+
+            border-top: 2px solid $color-black3;
+            border-left: 1px solid $color-black4;
+            border-right: 1px solid $color-black4;
+
+            cursor: pointer;
+            opacity: .4;
+
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #433b34;
+            background-color: #f5f5f5;
+
+        }
+        li.tab-title.active{
+            opacity: 1;
+            background-color: $color-white2;
+            position: relative;
+            &::before{
+                content: "";
+                width: 100%;
+                height: 20px;
+                background-color:$color-white2;
+
+                position: absolute;
+                bottom: -10px;
+                left: 0;
+
+            }
+        }
+    }
+    .tab-content{
+        border: 1px solid $color-black4;
+        padding: 40px 32px;
+        .content{
+            display: none;
+        }
+        .content.active{
+            display: block;
+        }
+       .info-item{
+           display: flex;
+           padding: 20px 0;
+           border-bottom: 1px solid #ececec ;
+           h1{
+               width: 50%;
+               font-size: $size-text-1;
+               text-transform: uppercase;
+               font-weight: 550;
+           }
+           p{
+               width: 50%;
+               font-size: $size-text-1;
+               text-transform: capitalize;
+
+           }
+        }
+        .baohanh-content{
+            font-size: $size-text-3;
+            color: $color-black5;
+            margin-bottom: 34px;
+        }
+        .rate-container{
+            h1{
+                margin-bottom: 24px;
+                font-size: $size-icon;
+                color:$color-black3;
+            }
+            p{
+                margin-bottom: 56px;
+                font-size: $size-text-3;
+                color:$color-black3;
+            }
+            .rate-section{
+                border: 2px solid $color-black5;
+                padding: 26px 32px;
+                h1{
+                    line-height: 1.8;
+                    letter-spacing: 1.1px;
+                    color: $color-black3;
+                }
+                p{
+                    margin-bottom: 12px;
+                    color: $color-black3;
+                    font-weight: 530;
+                }
+                ul.rate-star{
+                    margin-bottom: 12px;
+                }
+                textarea,
+                input{
+                    outline: none;
+                    border: 1px solid #ddd;
+                    box-shadow: inset 0 1px 2px rgba($color: #000000, $alpha: .1);
+                    margin-bottom: 30px;
+                }
+                textarea.comment{
+                    height: 132px;
+                    width: 100%;
+                    padding: 16px 12px;
+                    font-size: $size-text-5;
+                    overflow: auto;
+                }
+                label{
+                    display: block;
+                    margin-bottom: 12px;
+                    color: $color-black3;
+                    font-size: $size-text-3;
+                    font-weight: 530;
+                }
+                .form-group{
+                    display: flex;
+                    justify-content: space-between;
+                    .name-section,
+                    .email-section{
+                        width: 48%;
+                        input{
+                            width: 100%;
+                            height: 48px;
+                            padding: 0 12px;
+                            font-size: $size-text-5;
+                        }
+                    }
+                }
+                textarea,
+                input{
+                    &:focus{
+                        box-shadow: 0 0 5px #ccc;
+                    }
+                }
+                button.submit-btn{
+                    background-color: $color-black5;
+                    color: $color-white2;
+                    width: 84px;
+                    height: 40px;
+                    line-height: 40px;
+
+                    border: none;
+                    outline: none;
+                    font-weight: 530;
+                    font-size: $size-text-3;
+                    
+                    cursor: pointer;
+                    opacity: .9;
+                    &:hover{
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media (max-width:740px) {
+    .tab-container{
+        margin: 0;
+        padding: 0 8px;
+        ul.title-list{
+            li.tab-title{
+                height: unset;
+                text-align: center;
+                &:last-child{
+                    margin-right: 0;
+                }
+            }
+          
+            li.tab-title.active{
+               
+               
+            }
+        }
+        .tab-content{
+            padding: 40px 20px;
+            .content{
+            }
+            .content.active{
+            }
+           .info-item{
+                &:first-child{
+                    padding-top: 0;
+                }
+               h1{
+                  
+               }
+               p{
+                  
+                
+               }
+            }
+            .baohanh-content{
+               
+            }
+            .rate-container{
+                h1{
+                    
+                }
+                p{
+                   margin-bottom: 28px;
+                }
+                .rate-section{
+                    padding: 26px 16px;
+                    h1{
+                       
+                    }
+                    p{
+                      
+                    }
+                    ul.rate-star{
+                        
+                    }
+                    textarea,
+                    input{
+                       
+                    }
+                    textarea.comment{
+                       
+                    }
+                    label{
+                      
+                    }
+                    .form-group{
+                       flex-direction: column;
+                        .name-section,
+                        .email-section{
+                            width: 100%;
+                            input{
+                               
+                            }
+                        }
+                    }
+                   
+                    button.submit-btn{
+                   
+                        }
+                    }
+                }
+            }
+    }
+}
+    
+
+// Reponsive trên mobile
+
+
+//Trên PC
+
+

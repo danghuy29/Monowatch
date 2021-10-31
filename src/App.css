@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+html{
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    min-height: 10000px;
+}
+
+@media (max-width: 1023px){
+    .hidden-on-mobile-tablet{
+        display: none;
+    }
+  
+}
+/* Reponsive trên mobile và tablet */
+
+@media (max-width:740px) {
+   
+   
+}
+/* // Reponsive trên mobile */
+
+@media (min-width: 740px) and (max-width: 1023px) {
+  
+}
+/* //Reponsive trên tablet */
+
+@media (min-width: 1024px) and (max-width: 1239px) {
+    .hidden-on-large-tablet{
+        display: none;
+    }
+  
+}
+@media (min-width:1239px){
+    .hidden-on-PC{
+        display: none;
+    }
+}
+/* Trên PC */

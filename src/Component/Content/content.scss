@@ -1,0 +1,191 @@
+$fontwithstyle:'Roboto Slab', serif;
+$size-text-1:1.44rem;
+$size-text-2:1.4rem;
+$size-text-3:1.6rem;
+$size-text-4:1.08rem;
+$size-text-5:1.7rem;
+$size-icon:2rem;
+$size-sale-icon:2.6rem;
+$size-menu-toogle: 3rem;
+$size-bn-icon: 5rem;
+$size-text-banner: 4rem;
+// các biến về size 
+$color-white1:#ffffff;
+$color-white2:#fff;
+$color-white3:#4A4A4A;
+$color-black1:#3C3451;
+$color-black2:#353535;
+$color-black3:#1C1C1C;
+$color-black4:#767676;
+$color-black5:#000000;
+$color-text-menu:#848484;
+$color-yellow:#e2ba48;
+$color-menu-bar:#f8f8f8;
+//  các biến về màu 
+$header-height:90px;
+$header-height-mini:70px;
+$search-width:600px;
+$search-height:92px;
+$search-input-width:558px;
+$search-input-height:38px;
+$buy-section-width:294px;
+$buy-btn-height:40px;
+$modal-shop-width:320px;
+// các biến về khoảng cách 
+
+
+h2{
+    font-size: 4rem;
+    font-family: 'Roboto Slab', serif;
+  
+}
+h3{font-size: 2rem;}
+h4{font-size: 1.725rem;}
+
+#content{
+    margin: 0 0 60px 0;
+    text-align: center;
+    overflow-x: hidden;
+    h2.list-item-tittle{
+        color: $color-black1;
+        font-size: 3.5rem;
+        line-height: 4rem;
+        position: relative;
+        margin-bottom: 78px;
+        &::after{
+            content: "";
+            border-bottom: solid 1px #767676;
+            width: 100px;
+            position: absolute;
+            bottom: -24px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        &::before{
+            content: "";
+            border-bottom: solid 1px #767676;
+            width: 100px;
+            position: absolute;
+            bottom: -22px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    .list-item-wrapper{
+        margin-top: 60px;
+        margin-bottom: 30px;
+    }
+    .banner1{
+        background-image: url('./banner/bg-banner1.jpg');
+       .banner1-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+       
+        min-height: 244px;
+            .bn-content{
+                color: $color-white2;
+                display: flex;
+                align-items: center;      
+                .bn-content-icon{
+                    font-size: $size-bn-icon;
+                    margin-right: 22px;
+                 }
+                .bn-content-text{
+                    text-align: left;
+                     p{
+                     font-size: $size-text-2;
+                    }
+                 }
+            }
+       }
+    }
+    .banner2{
+        display: flex;
+        .banner-container{
+            width: 50%;
+            height: 300px;
+            position: relative;
+            overflow:hidden;
+            &:hover{
+               .banner-img-section.left{
+                transform: scale(1.08);
+               }
+               .banner-img-section.right{
+                transform: scale(1.08);
+               }
+            }
+            .banner-img-section.left{
+                width: 100%;
+                height: 100%;
+
+               background-image: url(./banner/bg-banner-2-1.jpg); 
+               background-size: cover;
+                
+               transition: .4s;  
+            }
+            .banner-img-section.right{
+                width: 100%;
+                height: 100%;
+                
+                background-image: url(./banner/bg-banner-2-2.jpg);
+                background-size: cover;
+
+                transition: .4s;
+            }
+            .banner-text-section{
+                height: 100%;
+                padding-right: 34px;
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-end;
+                text-align: right;
+                strong{
+                    font-size: $size-text-banner;
+                    color: $color-yellow;
+                    line-height: .9;
+                    margin-bottom: 20px;
+                }
+                h4{
+                    color: $color-white1;
+                    margin-bottom: 26px;
+                }
+                .detail-btn{
+                    width: 106px;
+                    height: 44px;
+
+                    color: $color-yellow;
+                    background-color: transparent;
+                    border: 3px solid $color-yellow;
+
+                    text-decoration: none;
+                    text-align: center;
+                    font-size: $size-text-5;
+                    font-weight: 600;
+                    line-height: 40px;
+
+                    transition: 0.3s;                                      
+                    &:hover{
+                        background-color: $color-yellow;
+                        color: $color-menu-bar;            
+                    }
+                }
+            }
+        }
+    }
+}
+@keyframes addFloatIn {
+    from{
+        transform: translateY(50%);
+    }
+    to{
+        transform: translateY(0%);
+    }
+}
+@import "mobilecontent.scss";
