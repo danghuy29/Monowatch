@@ -10,3 +10,9 @@ export const deleteItem = (item)=>{
         payload:item,
     })
 }
+export const upgradeItem = (item)=>{
+    return({
+        type:'UPGRADE_CART',
+        payload:item,
+    })
+}

@@ -11,7 +11,9 @@ export default function ModalShop(props) {
         return x;
     }
     const buylist = useSelector(state => state.cart)
-  
+    const handleClick = ()=>{
+        document.body.style.overflow = 'unset';
+    }
     if (!props.show) {
         return null
     }
@@ -59,7 +61,7 @@ export default function ModalShop(props) {
                     <h1>Tổng cộng: {changenumbertostring(buylist.total)} ₫</h1>
                 </div>
                 <div className="buybtn-section">
-                    <div className="buy-btn" ><Link to="/cart">XEM GIỎ HÀNG</Link></div>
+                    <div className="buy-btn" onClick={handleClick}><Link to="/cart">XEM GIỎ HÀNG</Link></div>
                     <div className="buy-btn"><a href="/">THANH TOÁN</a></div>
                 </div>
 

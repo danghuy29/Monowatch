@@ -5,7 +5,7 @@ import Product from '../Component/ProductPage/Product'
 import ScrollToTop from './ScrollToTop'
 import Category from '../Component/CategoryPage/Category'
 import ShopPage from '../Component/ShopPage/ShopPage'
-export default () => {
+const Dieuhuong = () => {
     return (
         <Switch>
             <Route exact path="/"><ScrollToTop/><Home/></Route>
@@ -18,3 +18,4 @@ export default () => {
         </Switch>
     )
 }
+export default Dieuhuong

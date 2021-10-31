@@ -14,7 +14,6 @@ export default function Product() {
     // const {title} =useParams()
     // console.log(title);
     let item = data.watch.find((item)=>item.id=== Number(id))
-    console.log(useParams());
     return (
         <div id="product-page">
             {/* <Header/> */}
