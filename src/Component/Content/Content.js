@@ -3,6 +3,7 @@ import './content.css'
 import ListItem from './ListItem';
 import 'aos/dist/aos.css'
 import RelatedNews from './Related News/RelatedNews';
+import SliderItem from './Slider Item/SliderItem';
 export default function Content() {
     return (
         <div id="content">
@@ -10,7 +11,10 @@ export default function Content() {
             <div className="banner1">
                 <div className="grid wide">
                     <div className="banner1-container ">
-                        <div className="bn-content">
+                        <div className="bn-content" 
+                            data-aos="fade-left"
+                            data-aos-duration="1400"
+                            data-aos-offset="120">
                             <div className="bn-content-icon">
                                 <i className="fa fa-truck" aria-hidden="true"></i>
                             </div>
@@ -22,7 +26,10 @@ export default function Content() {
                             </div>
                         </div>
 
-                        <div className="bn-content">
+                        <div className="bn-content"
+                            data-aos="fade-left"
+                            data-aos-duration="1500"
+                            data-aos-offset="120">
                             <div className="bn-content-icon">
                                 <i className="fas fa-gift    "></i>
                             </div>
@@ -34,7 +41,10 @@ export default function Content() {
                             </div>
                         </div>
 
-                        <div className="bn-content">
+                        <div className="bn-content"
+                            data-aos="fade-left"
+                            data-aos-duration="1600"
+                            data-aos-offset="120">
                             <div className="bn-content-icon">
                                <i className="fas fa-piggy-bank"></i>
                             </div>
@@ -100,6 +110,7 @@ export default function Content() {
                     </div>
                 </div>
             </div>
+           <SliderItem/>
             <RelatedNews />
         </div>
     )

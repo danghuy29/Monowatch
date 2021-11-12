@@ -2,7 +2,6 @@ import React from 'react'
 import Item from './Item Component/Item'
 import 'aos/dist/aos.css'
 import { useState } from 'react'
-// import data from '../data/data'
 import { useEffect } from 'react'
 import axios from 'axios'
 const  editsearch = (str) => {
@@ -28,7 +27,7 @@ const  editsearch = (str) => {
     str = str.toLowerCase()
     return str;
   }
-const url ='http://localhost:3000/watch'
+const url ='https://public-json-server.herokuapp.com/watch'
 export default function ListItem(props) {
     const [data,setData] = useState([])
     useEffect(()=>{

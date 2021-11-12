@@ -44,8 +44,6 @@
         justify-content: center;
         width: 30px;
 
-        // background-color: #fff;
-        // box-shadow: 0 -15px 150px 0 rgba($color: #000000, $alpha: .3);
         display: none;
         opacity: 0.6;
     }
@@ -89,19 +87,9 @@
             .next-btn{
                 display: flex
             }
-            // &:hover{
-            //     .previous-btn,
-            //     .next-btn{
-            //         display: none;
-            //     }
-            // }
         }
-      
-    }
-    
+    }   
 }
-//Reponsive trên mobile và tablet
-
 @media (max-width:740px) {
     .slider-container{
         cursor: grab;
@@ -115,18 +103,9 @@
     }
     }
 }
-// Reponsive trên mobile
-
-@media (min-width: 740px) and (max-width: 1023px) {  
-
-}
-//Reponsive trên tablet
-
 @media (min-width: 1024px) and (max-width: 1239px) {
 .slider-container{
-        cursor: grab;
-      
-  
+        cursor: grab; 
         .row{
             .watch{
                 button.watch-add-to-cart{
@@ -137,16 +116,8 @@
             .previous-btn,
             .next-btn{
                 display: flex;
-            }
-            // &:hover{
-            //     .previous-btn,
-            //     .next-btn{
-            //         display: none;
-            //     }
-            // }
+            }  
         }
-      
-    
 }
 }
 @media (min-width:1239px){

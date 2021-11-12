@@ -92,7 +92,8 @@ export default function Item(props) {
             <div className="watch-name"><Link to={
                 "/product/" + suatieude(props.item.ten) + "." + props.item.id +".html"
                 }>{props.item.ten}</Link></div>
-            <div className="watch-price"><span>{changenumbertostring(props.item.giagoc)}₫ </span>{changenumbertostring(props.item.giahientai)}  ₫</div>
+            <div className="watch-price"><span>{changenumbertostring(props.item.giagoc)} ₫    
+            </span>   {changenumbertostring(props.item.giahientai)}  ₫</div>
         </div>
         <div className="watch-sale" >-10%</div>
         <button className="watch-add-to-cart" onClick={handleAddToCart}>
