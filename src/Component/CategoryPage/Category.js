@@ -10,6 +10,7 @@ import { useEffect } from 'react'
 import { useParams } from 'react-router'
 
 import axios from 'axios'
+import productAPi from '../../API/productsAPI'
 
 
 export default function Category() {
@@ -27,20 +28,23 @@ export default function Category() {
         document.body.style.overflow = 'unset';
     }
     const {danhmuc} = useParams()
-    let url = `http://localhost:3000/watch?danhmuc=${danhmuc}`
+    // let url = `https://public-json-server.herokuapp.com/watch?danhmuc=${danhmuc}`
     const [data,setData] = useState([])
     useEffect(()=>{
         async function getData(){
             try{
-                const response = await axios.get(url)
-                setData(response.data)
+                const params = {
+                    danhmuc:danhmuc,
+                }
+                const response = await productAPi.getAll(params)
+                setData(response)
             }catch(err){
                 console.log(err);
             }
 
         }
         getData()
-    },[url])  
+    },[])  
     const filterHandle=(e)=>{
         console.log(typeof e.giatri);
     let  filterData = data.filter((item)=>item[e.danhmuc] ===e.giatri)
