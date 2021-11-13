@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { addNewItem } from '../../Action/Cart';
   const changenumbertostring=(x)=> {
         x = x.toString();
         var pattern = /(-?\d+)(\d{3})/;
@@ -36,7 +38,15 @@ import { Link } from 'react-router-dom';
         return str;
     }
 export default function Item(props) {
-   if(props.item.giagoc===props.item.giahientai){
+    const dispatch = useDispatch()
+    const handleAddToCart = ()=>{
+        let addedItem = {
+            item:props.item,
+            quantity:1,
+        }
+        dispatch(addNewItem(addedItem))
+    }
+    if(props.item.giagoc===props.item.giahientai){
        return(
         <div className="col l-4 m-4 c-6 watch" >
         <div className="watch-img">
@@ -51,7 +61,7 @@ export default function Item(props) {
                     }>{props.item.ten}</Link></div>
             <div className="watch-price">{changenumbertostring(props.item.giahientai)}  ₫</div>
         </div>
-        <button className="watch-add-to-cart">
+        <button className="watch-add-to-cart" onClick={handleAddToCart}>
             <i className="fa fa-cart-plus" aria-hidden="true"></i>
         </button>
     </div>
@@ -72,7 +82,7 @@ export default function Item(props) {
             <div className="watch-price"><span>{changenumbertostring(props.item.giagoc)} ₫ </span>{changenumbertostring(props.item.giahientai)}  ₫</div>
         </div>
         <div className="watch-sale" >-10%</div>
-        <button className="watch-add-to-cart">
+        <button className="watch-add-to-cart" onClick={handleAddToCart}>
             <i className="fa fa-cart-plus" aria-hidden="true"></i>
         </button>
     </div>

@@ -8,14 +8,37 @@ import ModalFilter from './ModalFilter'
 import { useState } from 'react'
 import { useEffect } from 'react'
 import { useParams } from 'react-router'
-
-import axios from 'axios'
 import productAPi from '../../API/productsAPI'
 
 
 export default function Category() {
     const handleFilterChange = (e) => {
-        console.log(e.target.value);
+      switch (e.target.value) {
+          case "defaultValue":
+            setParams(prev=>({
+                ...prev,
+                _sort:"",
+                _order:""
+            }))
+              break;
+        case "increase":
+            setParams(prev=>({
+                ...prev,
+                _sort:"giahientai",
+                _order:"asc"
+            }))
+                break;
+        case "decrease":
+            setParams(prev=>({
+                ...prev,
+                _sort:"giahientai",
+                _order:"desc"
+            }))
+              break;
+      
+          default:
+              break;
+      }
     }
     
     const [modal, setModal] = useState(false)
@@ -28,14 +51,17 @@ export default function Category() {
         document.body.style.overflow = 'unset';
     }
     const {danhmuc} = useParams()
-    // let url = `https://public-json-server.herokuapp.com/watch?danhmuc=${danhmuc}`
     const [data,setData] = useState([])
+   const [params,setParams] = useState({
+                                            
+                                            _sort:"",
+                                            _order:"",
+                                            danhmuc:danhmuc,
+                                        })
+                  
     useEffect(()=>{
         async function getData(){
             try{
-                const params = {
-                    danhmuc:danhmuc,
-                }
                 const response = await productAPi.getAll(params)
                 setData(response)
             }catch(err){
@@ -44,11 +70,17 @@ export default function Category() {
 
         }
         getData()
-    },[danhmuc])  
+    },[params])
+
+    useEffect(() => {
+        setParams({
+            _sort:"",
+            _order:"",
+            danhmuc:danhmuc,
+        })
+    }, [danhmuc])
     const filterHandle=(e)=>{
-        console.log(typeof e.giatri);
     let  filterData = data.filter((item)=>item[e.danhmuc] ===e.giatri)
-        console.log(filterData);
         setData(filterData)
     }
     return (
@@ -65,14 +97,14 @@ export default function Category() {
                         LỌC
                     </div>
                     <div className="filter-section">
-                        <p className="hidden-on-mobile-tablet">Xem tất cả 8 kết quả</p>
+                        <p className="hidden-on-mobile-tablet">Xem tất cả {data.length} kết quả</p>
                         <select id="filter-producs" name="products" onChange={(e) => handleFilterChange(e)}>
-                            <option default value="default">Thứ tự mặc định</option>
-                            <option value="trend">Thứ tự theo mức độ phổ biến</option>
+                            <option default value="defaultValue">Thứ tự mặc định</option>
+                            {/* <option value="trend">Thứ tự theo mức độ phổ biến</option>
                             <option value="rate">Thứ tự theo điểm đánh giá</option>
-                            <option value="new">Thứ tự theo sản phẩm mới</option>
-                            <option value="price-increase">Giá từ thấp đến cao</option>
-                            <option value="price-decrease">Giá từ cao đến thấp</option>
+                            <option value="new">Thứ tự theo sản phẩm mới</option> */}
+                            <option value="increase">Giá từ thấp đến cao</option>
+                            <option value="decrease">Giá từ cao đến thấp</option>
                         </select>
                     </div>
                 </div>

@@ -3,7 +3,6 @@ import Item from './Item Component/Item'
 import 'aos/dist/aos.css'
 import { useState } from 'react'
 import { useEffect } from 'react'
-import axios from 'axios'
 import productAPi from '../../API/productsAPI'
 const  editsearch = (str) => {
     // Chuyển hết sang chữ thường
@@ -28,7 +27,6 @@ const  editsearch = (str) => {
     str = str.toLowerCase()
     return str;
   }
-const url ='https://public-json-server.herokuapp.com/watch'
 export default function ListItem(props) {
     const [data,setData] = useState([])
     useEffect(()=>{
