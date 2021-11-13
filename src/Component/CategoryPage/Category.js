@@ -44,7 +44,7 @@ export default function Category() {
 
         }
         getData()
-    },[])  
+    },[danhmuc])  
     const filterHandle=(e)=>{
         console.log(typeof e.giatri);
     let  filterData = data.filter((item)=>item[e.danhmuc] ===e.giatri)
