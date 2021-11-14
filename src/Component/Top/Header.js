@@ -3,6 +3,7 @@ import Cart from './Cart'
 import Navbarmobile from './Navbarmobile'
 import { useState, useEffect, useCallback} from 'react'
 import { NavLink} from 'react-router-dom'
+import Search from '../Search/Search'
 
 export default function Header() {
     const [showHeader, setShowHeader] = useState(false)
@@ -56,15 +57,7 @@ export default function Header() {
                     {/* Navbar end */}
 
                     <div className="customer-section">
-                        <div className="search-section hidden-on-mobile-tablet hidden-on-large-tablet customer-section-item">
-                            <i className="fa fa-search separate" aria-hidden="true" />
-                            <div className="searchBx">
-                                <div className="input-section ">
-                                    <input type="text" placeholder="Nhập sản phẩm bạn cần tìm..." />
-                                    <i className="fa fa-search" aria-hidden="true" />
-                                </div>
-                            </div>
-                        </div>
+                        <Search/>
                         <div className="login-section hidden-on-mobile-tablet hidden-on-large-tablet customer-section-item"><i className="fa fa-user separate" aria-hidden="true" /></div>
                         <Cart />
                     </div>

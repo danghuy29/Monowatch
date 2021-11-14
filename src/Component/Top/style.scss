@@ -173,7 +173,7 @@ h4{font-size: 1.725rem;}
                    .search-section{
                        .searchBx{
                            width: $search-width;
-                           height: $search-height;
+                           min-height: $search-height;
     
                            position: absolute;
                            right: -200%;
@@ -183,14 +183,18 @@ h4{font-size: 1.725rem;}
                            border: 2px solid $color-yellow;
     
                            display: flex;
+                           flex-direction: column;
                            justify-content: center;
-                           align-items: center;
+                          
+                        //    align-items: center;
     
                             visibility: hidden;
                             opacity: 0;
                            transition:0.2s linear;
+                           padding: 20px 10px;
                            .input-section{
-                            width: $search-input-width;
+                            // width: $search-input-width;
+                            width: 100%;
                             height: $search-input-height;
     
                             border-radius: $search-input-height;
@@ -200,6 +204,7 @@ h4{font-size: 1.725rem;}
                             align-items: center;
                             justify-content: space-between;
                             padding-left: 16px;
+                            margin-bottom: 10px;
                             input{
                                 font-size: $size-text-3;
                                 height: 60%;
@@ -212,6 +217,46 @@ h4{font-size: 1.725rem;}
                             i{
                                 color: #353535;
                             }
+                           }
+                           .input__content{
+                               max-height: 400px;
+                               overflow-y: auto;
+                                .content__item{
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
+                                    padding: 10px;
+                                        // margin-top: 10px;
+                                    border-bottom: 1px solid #F2F2F2;
+                                    text-decoration: none;
+                                    color: $color-black3;
+                                    &__img{
+                                        width: 40px;
+                                        border-radius: 100%;
+                                        overflow: hidden;
+                                        img{
+                                            width: 100%;
+                                        }
+                                    }
+                                    &__name{
+                                        max-width: 410px;
+                                       h3{
+                                        font-size: 1.7rem;
+                                        font-weight: 400;
+                                       }
+                                        
+                                    }
+                                    &__price{
+                                        font-weight: 600;
+                                        font-size: 1.4rem;
+                                    }  
+                                    // &:last-child{
+                                    //     border-bottom: none;
+                                    // } 
+                                    &:hover{
+                                        background-color: #F2F2F2;
+                                    }
+                                }
                            }
                        }
                        &:hover{

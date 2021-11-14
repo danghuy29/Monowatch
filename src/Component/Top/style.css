@@ -103,27 +103,29 @@ h4 {
               cursor: pointer; }
           #top-section .header .grid .container .customer-section .search-section .searchBx {
             width: 600px;
-            height: 92px;
+            min-height: 92px;
             position: absolute;
             right: -200%;
             background-color: #ffffff;
             border-radius: 8px;
             border: 2px solid #e2ba48;
             display: flex;
+            flex-direction: column;
             justify-content: center;
-            align-items: center;
             visibility: hidden;
             opacity: 0;
-            transition: 0.2s linear; }
+            transition: 0.2s linear;
+            padding: 20px 10px; }
             #top-section .header .grid .container .customer-section .search-section .searchBx .input-section {
-              width: 558px;
+              width: 100%;
               height: 38px;
               border-radius: 38px;
               border: 1px solid #b9b3cb;
               display: flex;
               align-items: center;
               justify-content: space-between;
-              padding-left: 16px; }
+              padding-left: 16px;
+              margin-bottom: 10px; }
               #top-section .header .grid .container .customer-section .search-section .searchBx .input-section input {
                 font-size: 1.6rem;
                 height: 60%;
@@ -133,6 +135,33 @@ h4 {
                 background-color: transparent; }
               #top-section .header .grid .container .customer-section .search-section .searchBx .input-section i {
                 color: #353535; }
+            #top-section .header .grid .container .customer-section .search-section .searchBx .input__content {
+              max-height: 400px;
+              overflow-y: auto; }
+              #top-section .header .grid .container .customer-section .search-section .searchBx .input__content .content__item {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 10px;
+                border-bottom: 1px solid #F2F2F2;
+                text-decoration: none;
+                color: #1C1C1C; }
+                #top-section .header .grid .container .customer-section .search-section .searchBx .input__content .content__item__img {
+                  width: 40px;
+                  border-radius: 100%;
+                  overflow: hidden; }
+                  #top-section .header .grid .container .customer-section .search-section .searchBx .input__content .content__item__img img {
+                    width: 100%; }
+                #top-section .header .grid .container .customer-section .search-section .searchBx .input__content .content__item__name {
+                  max-width: 410px; }
+                  #top-section .header .grid .container .customer-section .search-section .searchBx .input__content .content__item__name h3 {
+                    font-size: 1.7rem;
+                    font-weight: 400; }
+                #top-section .header .grid .container .customer-section .search-section .searchBx .input__content .content__item__price {
+                  font-weight: 600;
+                  font-size: 1.4rem; }
+                #top-section .header .grid .container .customer-section .search-section .searchBx .input__content .content__item:hover {
+                  background-color: #F2F2F2; }
           #top-section .header .grid .container .customer-section .search-section:hover .searchBx {
             visibility: visible;
             opacity: 1; }
