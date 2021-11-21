@@ -41,7 +41,7 @@ export default function Header() {
                             <li className="nav-item separate"><NavLink to = "/category/Đồng hồ nam">ĐỒNG HỒ NAM</NavLink></li>
                             <li className="nav-item separate"><NavLink to = "/category/Đồng hồ nữ">ĐỒNG HỒ NỮ</NavLink></li>
                             <li className="nav-item separate"><NavLink to = "/category/Đồng hồ đôi">ĐỒNG HỒ ĐÔI</NavLink></li>
-                            <li className="nav-item separate"><NavLink to = "/category/Phụ kiện">PHỤ KIỆN</NavLink>
+                            {/* <li className="nav-item separate"><NavLink to = "/category/Phụ kiện">PHỤ KIỆN</NavLink>
                                 <ul className="subnav-list">
                                     <li className="subnav-item"><NavLink to = "/category/Phụ kiện.Dây Da Hirsch">Dây Da Hirsch</NavLink></li>
                                     <li className="subnav-item"><NavLink to = "/category/Phụ kiện.Dây Da ZRC">Dây Da ZRC</NavLink></li>
@@ -49,7 +49,7 @@ export default function Header() {
                                     <li className="subnav-item"><NavLink to = "/category/Phụ kiện.Dịch Vụ In Logo Lên Đồng Hồ">Dịch Vụ In Logo Lên Đồng Hồ</NavLink></li>
                                     <li className="subnav-item"><NavLink to = "/category/Phụ kiện.Khắc Laser Lên Đồng Hồ">Khắc Laser Lên Đồng Hồ</NavLink></li>
                                 </ul>
-                            </li>
+                            </li> */}
                             <li className="nav-item separate"><a href="/">TIN TỨC</a></li>
                             <li className="nav-item"><a href="/">LIÊN HỆ</a></li>
                         </ul>

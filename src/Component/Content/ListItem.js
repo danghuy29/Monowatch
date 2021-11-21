@@ -4,7 +4,8 @@ import 'aos/dist/aos.css'
 import { useState } from 'react'
 import { useEffect } from 'react'
 import productAPi from '../../API/productsAPI'
-const  editsearch = (str) => {
+import { ClipLoader } from 'react-spinners'
+const editsearch = (str) => {
     // Chuyển hết sang chữ thường
     str = str.toLowerCase();
     // xóa dấu
@@ -26,42 +27,51 @@ const  editsearch = (str) => {
     // return
     str = str.toLowerCase()
     return str;
-  }
-  
+}
+
 export default function ListItem(props) {
-    const [data,setData] = useState([])
-    useEffect(()=>{
-        async function getData(){
-            try{
-               const response = await productAPi.getAll()
-               setData(response)
-            }catch(err){
+    const [data, setData] = useState([])
+    const [loading, setLoading] = useState(true)
+    useEffect(() => {
+        async function getData() {
+            try {
+                const response = await productAPi.getAll()
+                setData(response)
+                setLoading(false)
+            } catch (err) {
                 console.log(err);
             }
 
         }
         getData()
-    },[])   
+    }, [])
+    console.log(props.danhmuc);
+    console.log(loading);
     return (
         <div className="grid wide list-item-wrapper">
-            <h2 className="list-item-tittle"
-                data-aos="fade-up"
-                data-aos-duration="1200" 
-                data-aos-offset="120"
-            >{props.danhmuc}</h2>
-            <div className="row container">
-             
-               {
-                   data.map((item,index)=>{
-                    if(editsearch(props.danhmuc)===editsearch(item.danhmuc)){
-                        return(
-                            <Item key = {index} item={item}/>
-                        )
-                    }
-                    return null
-                   })
-               }
-            </div>
+            {
+                loading ? <ClipLoader /> :
+                    <>
+                        <h2 className="list-item-tittle"
+                            data-aos="fade-up"
+                            data-aos-duration="1200"
+                            data-aos-offset="120"
+                        >{props.danhmuc}</h2>
+                        <div className="row container">
+                            {
+                                data.map((item, index) => {
+                                    if (editsearch(props.danhmuc) === editsearch(item.danhmuc)) {
+                                        return (
+                                            <Item key={index} item={item} />
+                                        )
+                                    }
+                                    return null
+                                })
+                            }
+                        </div>
+                    </>
+            }
+
         </div>
     )
 }

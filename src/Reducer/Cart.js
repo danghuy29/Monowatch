@@ -23,7 +23,7 @@ const cartReducer = (state = initialState, action) => {
            if(checkExisted){
                 state.item[existed].quantity +=action.payload.quantity
                 let total = 0;
-                state.item.forEach((item,index)=>{
+                state.item.forEach((item)=>{
                     total = total + item.item.giahientai*item.quantity
                 })
                 window.localStorage.setItem('cart', JSON.stringify({
@@ -75,7 +75,7 @@ const cartReducer = (state = initialState, action) => {
         }
         case 'UPGRADE_CART':{
             let total = 0 
-            action.payload.forEach((item,index)=>{
+            action.payload.forEach((item)=>{
                 total = total + item.item.giahientai*item.quantity
             })
             window.localStorage.setItem('cart', JSON.stringify({

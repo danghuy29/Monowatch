@@ -92,6 +92,10 @@ h4 {
             color: #e2ba48; }
         #category .filter-product .danhmuc .list .list-item:hover {
           color: #e2ba48; }
+          #category .filter-product .danhmuc .list .list-item:hover .title {
+            color: #1C1C1C; }
+          #category .filter-product .danhmuc .list .list-item:hover .sub-item {
+            color: #1C1C1C; }
         #category .filter-product .danhmuc .list .list-item .title {
           display: flex;
           justify-content: space-between;
@@ -111,8 +115,8 @@ h4 {
             padding: 8px 0; }
             #category .filter-product .danhmuc .list .list-item .sublist .sub-item a {
               font-size: 1.2rem; }
-              #category .filter-product .danhmuc .list .list-item .sublist .sub-item a:hover {
-                color: #e2ba48; }
+            #category .filter-product .danhmuc .list .list-item .sublist .sub-item:hover {
+              color: #e2ba48; }
 #category .modal-filter {
   position: fixed;
   top: 0;

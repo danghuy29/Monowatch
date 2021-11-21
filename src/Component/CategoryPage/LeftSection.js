@@ -119,7 +119,7 @@ export default function LeftSection(props) {
                     <li className="list-item" type="kichthuocmatso" onClick={handleClick}>{'<'} 29 mm</li>
                     <li className="list-item" type="kichthuocmatso" onClick={handleClick}>30 - 34 mm</li>
                     <li className="list-item" type="kichthuocmatso" onClick={handleClick}>35 - 39 mm</li>
-                    <li className="list-item" type="kichthuocmatso" onClick={handleClick}>40 – 43 mm</li>
+                    <li className="list-item" type="kichthuocmatso" onClick={handleClick}>40 – 43 mm    </li>
                 </ul>
             </div>
 

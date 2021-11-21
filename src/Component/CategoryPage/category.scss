@@ -144,6 +144,14 @@ h4{font-size: 1.725rem;}
                   }
                   &:hover{
                     color: $color-yellow;
+                   .title{
+                       color: $color-black3;
+                     
+
+                   }
+                   .sub-item{
+                    color: $color-black3;
+                }
                 }
                 .title{
                     display: flex;
@@ -168,10 +176,11 @@ h4{font-size: 1.725rem;}
                         padding: 8px 0;
                           a{
                                  font-size: 1.2rem;
-                                 &:hover{
-                                    color: $color-yellow;
-                                }
+                                 
                           }
+                          &:hover{
+                            color: $color-yellow;
+                        }
                       }
                   }
               }
