@@ -304,6 +304,33 @@ $modal-shop-width:320px;
         }
 
     }
+    .no__item{
+        min-height: 315px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        p{
+            color: #353535;
+            font-size: 2.08rem;
+            margin-bottom: 20.8px;
+        }
+        a.back-btn{
+            background-color: black;
+            width: 230px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+           
+                color: #fff;
+                font-size: 1.52rem;
+                text-transform: uppercase;
+                text-decoration: none;
+                font-weight: 700;
+           
+        }
+    }
 }
 
 

@@ -45,8 +45,7 @@ export default function ListItem(props) {
         }
         getData()
     }, [])
-    console.log(props.danhmuc);
-    console.log(loading);
+ 
     return (
         <div className="grid wide list-item-wrapper">
             {

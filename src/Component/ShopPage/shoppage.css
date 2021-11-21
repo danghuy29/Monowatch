@@ -189,6 +189,28 @@
     font-weight: 550; }
     #cart-page .right-section .pay-btn:hover {
       background-color: #b5953a; }
+#cart-page .no__item {
+  min-height: 315px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; }
+  #cart-page .no__item p {
+    color: #353535;
+    font-size: 2.08rem;
+    margin-bottom: 20.8px; }
+  #cart-page .no__item a.back-btn {
+    background-color: black;
+    width: 230px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.52rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700; }
 
 h2 {
   font-size: 3.2rem; }

@@ -4,6 +4,7 @@ import Navbarmobile from '../../Top/Navbarmobile'
 import "./productheader.css"
 import { useState, useEffect, useCallback } from 'react'
 import { Link,NavLink } from 'react-router-dom'
+import Search from '../../Search/Search'
 export default function ProductHeader() {
     const [showHeader, setShowHeader] = useState(false)
     const handleScroll=useCallback(()=>{
@@ -40,29 +41,21 @@ export default function ProductHeader() {
                             <li className="nav-item separate"><NavLink to='/category/Đồng hồ đôi'>ĐỒNG HỒ ĐÔI</NavLink></li>
                             <li className="nav-item separate"><NavLink to='/category/Phụ kiện'>PHỤ KIỆN</NavLink>
                                 <ul className="subnav-list">
-                                    <li className="subnav-item"><NavLink to='/category'>Dây Da Hirsch</NavLink></li>
-                                    <li className="subnav-item"><NavLink to='/category'>Dây Da ZRC</NavLink></li>
-                                    <li className="subnav-item"><NavLink to='/category'>Hộp Đồng Hồ</NavLink></li>
-                                    <li className="subnav-item"><NavLink to='/category'>Dịch Vụ In Logo Lên Đồng Hồ</NavLink></li>
-                                    <li className="subnav-item"><NavLink to='/category'>Khắc Laser Lên Đồng Hồ</NavLink></li>
+                                    <li className="subnav-item"><NavLink to='/category/Phụ kiện'>Dây Da Hirsch</NavLink></li>
+                                    <li className="subnav-item"><NavLink to='/category/Phụ kiện'>Dây Da ZRC</NavLink></li>
+                                    <li className="subnav-item"><NavLink to='/category/Phụ kiện'>Hộp Đồng Hồ</NavLink></li>
+                                    <li className="subnav-item"><NavLink to='/category/Phụ kiện'>Dịch Vụ In Logo Lên Đồng Hồ</NavLink></li>
+                                    <li className="subnav-item"><NavLink to='/category/Phụ kiện'>Khắc Laser Lên Đồng Hồ</NavLink></li>
                                 </ul>
                             </li>
-                            <li className="nav-item separate"><NavLink to='/category'>TIN TỨC</NavLink></li>
-                            <li className="nav-item"><NavLink to='/category'>LIÊN HỆ</NavLink></li>
+                            <li className="nav-item separate"><NavLink to='/home'>TIN TỨC</NavLink></li>
+                            <li className="nav-item"><NavLink to='/home'>LIÊN HỆ</NavLink></li>
                         </ul>
                     </div>
                     {/* Navbar end */}
 
                     <div className="customer-section">
-                        <div className="search-section hidden-on-mobile-tablet hidden-on-large-tablet customer-section-item">
-                            <i className="fa fa-search separate" aria-hidden="true" />
-                            <div className="searchBx">
-                                <div className="input-section ">
-                                    <input type="text" placeholder="Nhập sản phẩm bạn cần tìm..." />
-                                    <i className="fa fa-search" aria-hidden="true" />
-                                </div>
-                            </div>
-                        </div>
+                        <Search/>
                         <div className="login-section hidden-on-mobile-tablet hidden-on-large-tablet customer-section-item"><i className="fa fa-user separate" aria-hidden="true" /></div>
                         <Cart />
                     </div>

@@ -25,9 +25,9 @@ export default function ModalMenu(props) {
                     <div className="modal-menu-content">
                         <ul className="mobile-navbar-list">
                             <li className="mobile-navbar-item" onClick={handleClickNav}><NavLink to="/home">GIỚI THIỆU</NavLink></li>
-                            <li className="mobile-navbar-item" onClick={handleClickNav}><NavLink to="/category/Đồng hồ nam">ĐỒNG HỒ NAM</NavLink></li>
-                            <li className="mobile-navbar-item" onClick={handleClickNav}><NavLink to="/category/Đồng hồ nữ">ĐỒNG HỒ NỮ</NavLink></li>
-                            <li className="mobile-navbar-item" onClick={handleClickNav}><NavLink to="/category/Đồng hồ đôi">ĐỒNG HỒ ĐÔI</NavLink></li>
+                            <li className="mobile-navbar-item" onClick={handleClickNav}><a href="/category/Đồng hồ nam">ĐỒNG HỒ NAM</a></li>
+                            <li className="mobile-navbar-item" onClick={handleClickNav}><a href="/category/Đồng hồ nữ">ĐỒNG HỒ NỮ</a></li>
+                            <li className="mobile-navbar-item" onClick={handleClickNav}><a href="/category/Đồng hồ đôi">ĐỒNG HỒ ĐÔI</a></li>
                             <li className="mobile-navbar-item" onClick={()=>setShowSubMenu(!showSubMenu)}>
                                 <div>PHỤ KIỆN</div>
                                 <i className={"fa fa-chevron-down"+(showSubMenu?" active":"")} aria-hidden="true"></i>

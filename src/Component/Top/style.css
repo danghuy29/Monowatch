@@ -198,23 +198,35 @@ h4 {
                 display: flex;
                 border-bottom: 1px solid rgba(0, 0, 0, 0.1);
                 padding: 8px 0;
-                position: relative; }
+                position: relative;
+                text-decoration: none; }
                 #top-section .header .grid .container .customer-section .cart-section .buy-section .buy-list .buy-item .item-img {
-                  width: 30%; }
+                  width: 30%;
+                  display: flex;
+                  align-items: center;
+                  cursor: pointer; }
                   #top-section .header .grid .container .customer-section .cart-section .buy-section .buy-list .buy-item .item-img img {
                     width: 100%; }
                 #top-section .header .grid .container .customer-section .cart-section .buy-section .buy-list .buy-item .item-info {
-                  width: 60%; }
-                  #top-section .header .grid .container .customer-section .cart-section .buy-section .buy-list .buy-item .item-info h4.item-name {
-                    font-weight: 400; }
+                  width: 60%;
+                  margin-right: 2px; }
+                  #top-section .header .grid .container .customer-section .cart-section .buy-section .buy-list .buy-item .item-info a.item-name {
+                    font-weight: 400;
+                    cursor: pointer;
+                    text-decoration: none;
+                    font-size: 1.44rem;
+                    color: #000000; }
                   #top-section .header .grid .container .customer-section .cart-section .buy-section .buy-list .buy-item .item-info p.item-price {
                     font-size: 1.4rem;
                     margin-top: 8px;
-                    opacity: 0.8; }
+                    opacity: 0.8;
+                    color: #1C1C1C; }
+                  #top-section .header .grid .container .customer-section .cart-section .buy-section .buy-list .buy-item .item-info:hover a.item-name {
+                    color: #e2ba48; }
                 #top-section .header .grid .container .customer-section .cart-section .buy-section .buy-list .buy-item .delete-item {
                   position: absolute;
                   top: 4px;
-                  right: 6px; }
+                  right: 1px; }
                   #top-section .header .grid .container .customer-section .cart-section .buy-section .buy-list .buy-item .delete-item i {
                     color: #353535;
                     padding: 0;
@@ -348,9 +360,12 @@ h4 {
         display: flex;
         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
         padding: 10px 48px 10px 10px;
-        position: relative; }
+        position: relative;
+        text-decoration: none; }
         .modal .modalShop-container .buy-list .buy-item .item-img {
-          width: 30%; }
+          width: 30%;
+          display: flex;
+          align-items: center; }
           .modal .modalShop-container .buy-list .buy-item .item-img img {
             width: 100%; }
         .modal .modalShop-container .buy-list .buy-item .item-info {
@@ -362,12 +377,17 @@ h4 {
           flex-direction: column;
           justify-content: center;
           align-items: center; }
-          .modal .modalShop-container .buy-list .buy-item .item-info h4.item-name {
-            font-weight: 400; }
+          .modal .modalShop-container .buy-list .buy-item .item-info .item-name {
+            font-weight: 400;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 1.44rem;
+            color: #000000; }
           .modal .modalShop-container .buy-list .buy-item .item-info p.item-price {
             font-size: 1.4rem;
             margin-top: 8px;
-            opacity: 0.8; }
+            opacity: 0.8;
+            color: #1C1C1C; }
         .modal .modalShop-container .buy-list .buy-item .delete-item {
           position: absolute;
           top: 10px;

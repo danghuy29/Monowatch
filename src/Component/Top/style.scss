@@ -309,27 +309,43 @@ h4{font-size: 1.725rem;}
                                 border-bottom: 1px solid rgba($color: #000000, $alpha: 0.1);
                                 padding: 8px 0;
                                 position: relative;
+                                text-decoration: none;
                                 .item-img{
                                     width: 30%;
+                                    display: flex;
+                                    align-items: center;
+                                    cursor: pointer;
+
                                     img{
                                         width: 100%;
                                     }
                                 }
                                 .item-info{
                                     width: 60%;
-                                    h4.item-name{
+                                    margin-right: 2px;
+                                    a.item-name{
                                         font-weight: 400;
+                                        cursor: pointer;
+                                        text-decoration: none;
+                                        font-size: 1.44rem;
+                                        color: $color-black5;
                                     }
                                     p.item-price{
                                         font-size: $size-text-2;
                                         margin-top: 8px;
                                         opacity: 0.8;
+                                        color: $color-black3;
+                                    }
+                                    &:hover{
+                                        a.item-name{
+                                            color: $color-yellow;
+                                        }
                                     }
                                 }
                                 .delete-item{
                                     position: absolute;
                                     top: 4px;
-                                    right: 6px;
+                                    right: 1px;
                                     i{
                                         color: $color-black2;
                                         padding: 0;
@@ -527,8 +543,11 @@ h4{font-size: 1.725rem;}
                 border-bottom: 1px solid rgba($color: #000000, $alpha: 0.1);
                 padding: 10px 48px 10px 10px ;
                 position: relative;
+                text-decoration: none;
                 .item-img{
                     width: 30%;
+                    display: flex;
+                    align-items: center;
                     img{
                         width: 100%;
                     }
@@ -543,13 +562,18 @@ h4{font-size: 1.725rem;}
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
-                    h4.item-name{
+                    .item-name{
                         font-weight: 400;
+                        cursor: pointer;
+                        text-decoration: none;
+                        font-size: 1.44rem;
+                        color: $color-black5;
                     }
                     p.item-price{
                         font-size: $size-text-2;
                         margin-top: 8px;
                         opacity: 0.8;
+                        color: $color-black3;
                     }
                 }
                 .delete-item{

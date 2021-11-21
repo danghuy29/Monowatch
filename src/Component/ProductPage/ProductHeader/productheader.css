@@ -146,29 +146,31 @@ h4 {
         #category .header .grid .container .customer-section .search-section .searchBx,
         #cart-page .header .grid .container .customer-section .search-section .searchBx {
           width: 600px;
-          height: 92px;
+          min-height: 92px;
           position: absolute;
           right: -200%;
           background-color: #ffffff;
           border-radius: 8px;
           border: 2px solid #e2ba48;
           display: flex;
+          flex-direction: column;
           justify-content: center;
-          align-items: center;
           visibility: hidden;
           opacity: 0;
-          transition: 0.2s linear; }
+          transition: 0.2s linear;
+          padding: 20px 10px; }
           #product-page .header .grid .container .customer-section .search-section .searchBx .input-section,
           #category .header .grid .container .customer-section .search-section .searchBx .input-section,
           #cart-page .header .grid .container .customer-section .search-section .searchBx .input-section {
-            width: 558px;
+            width: 100%;
             height: 38px;
             border-radius: 38px;
             border: 1px solid #b9b3cb;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding-left: 16px; }
+            padding-left: 16px;
+            margin-bottom: 10px; }
             #product-page .header .grid .container .customer-section .search-section .searchBx .input-section input,
             #category .header .grid .container .customer-section .search-section .searchBx .input-section input,
             #cart-page .header .grid .container .customer-section .search-section .searchBx .input-section input {
@@ -182,6 +184,49 @@ h4 {
             #category .header .grid .container .customer-section .search-section .searchBx .input-section i,
             #cart-page .header .grid .container .customer-section .search-section .searchBx .input-section i {
               color: #353535; }
+          #product-page .header .grid .container .customer-section .search-section .searchBx .input__content,
+          #category .header .grid .container .customer-section .search-section .searchBx .input__content,
+          #cart-page .header .grid .container .customer-section .search-section .searchBx .input__content {
+            max-height: 400px;
+            overflow-y: auto; }
+            #product-page .header .grid .container .customer-section .search-section .searchBx .input__content .content__item,
+            #category .header .grid .container .customer-section .search-section .searchBx .input__content .content__item,
+            #cart-page .header .grid .container .customer-section .search-section .searchBx .input__content .content__item {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              padding: 10px;
+              border-bottom: 1px solid #F2F2F2;
+              text-decoration: none;
+              color: #1C1C1C; }
+              #product-page .header .grid .container .customer-section .search-section .searchBx .input__content .content__item__img,
+              #category .header .grid .container .customer-section .search-section .searchBx .input__content .content__item__img,
+              #cart-page .header .grid .container .customer-section .search-section .searchBx .input__content .content__item__img {
+                width: 40px;
+                border-radius: 100%;
+                overflow: hidden; }
+                #product-page .header .grid .container .customer-section .search-section .searchBx .input__content .content__item__img img,
+                #category .header .grid .container .customer-section .search-section .searchBx .input__content .content__item__img img,
+                #cart-page .header .grid .container .customer-section .search-section .searchBx .input__content .content__item__img img {
+                  width: 100%; }
+              #product-page .header .grid .container .customer-section .search-section .searchBx .input__content .content__item__name,
+              #category .header .grid .container .customer-section .search-section .searchBx .input__content .content__item__name,
+              #cart-page .header .grid .container .customer-section .search-section .searchBx .input__content .content__item__name {
+                max-width: 410px; }
+                #product-page .header .grid .container .customer-section .search-section .searchBx .input__content .content__item__name h3,
+                #category .header .grid .container .customer-section .search-section .searchBx .input__content .content__item__name h3,
+                #cart-page .header .grid .container .customer-section .search-section .searchBx .input__content .content__item__name h3 {
+                  font-size: 1.7rem;
+                  font-weight: 400; }
+              #product-page .header .grid .container .customer-section .search-section .searchBx .input__content .content__item__price,
+              #category .header .grid .container .customer-section .search-section .searchBx .input__content .content__item__price,
+              #cart-page .header .grid .container .customer-section .search-section .searchBx .input__content .content__item__price {
+                font-weight: 600;
+                font-size: 1.4rem; }
+              #product-page .header .grid .container .customer-section .search-section .searchBx .input__content .content__item:hover,
+              #category .header .grid .container .customer-section .search-section .searchBx .input__content .content__item:hover,
+              #cart-page .header .grid .container .customer-section .search-section .searchBx .input__content .content__item:hover {
+                background-color: #F2F2F2; }
         #product-page .header .grid .container .customer-section .search-section:hover .searchBx,
         #category .header .grid .container .customer-section .search-section:hover .searchBx,
         #cart-page .header .grid .container .customer-section .search-section:hover .searchBx {
@@ -228,11 +273,15 @@ h4 {
               display: flex;
               border-bottom: 1px solid rgba(0, 0, 0, 0.1);
               padding: 8px 0;
-              position: relative; }
+              position: relative;
+              text-decoration: none; }
               #product-page .header .grid .container .customer-section .cart-section .buy-section .buy-list .buy-item .item-img,
               #category .header .grid .container .customer-section .cart-section .buy-section .buy-list .buy-item .item-img,
               #cart-page .header .grid .container .customer-section .cart-section .buy-section .buy-list .buy-item .item-img {
-                width: 30%; }
+                width: 30%;
+                display: flex;
+                align-items: center;
+                cursor: pointer; }
                 #product-page .header .grid .container .customer-section .cart-section .buy-section .buy-list .buy-item .item-img img,
                 #category .header .grid .container .customer-section .cart-section .buy-section .buy-list .buy-item .item-img img,
                 #cart-page .header .grid .container .customer-section .cart-section .buy-section .buy-list .buy-item .item-img img {
@@ -240,23 +289,33 @@ h4 {
               #product-page .header .grid .container .customer-section .cart-section .buy-section .buy-list .buy-item .item-info,
               #category .header .grid .container .customer-section .cart-section .buy-section .buy-list .buy-item .item-info,
               #cart-page .header .grid .container .customer-section .cart-section .buy-section .buy-list .buy-item .item-info {
-                width: 60%; }
-                #product-page .header .grid .container .customer-section .cart-section .buy-section .buy-list .buy-item .item-info h4.item-name,
-                #category .header .grid .container .customer-section .cart-section .buy-section .buy-list .buy-item .item-info h4.item-name,
-                #cart-page .header .grid .container .customer-section .cart-section .buy-section .buy-list .buy-item .item-info h4.item-name {
-                  font-weight: 400; }
+                width: 60%;
+                margin-right: 2px; }
+                #product-page .header .grid .container .customer-section .cart-section .buy-section .buy-list .buy-item .item-info a.item-name,
+                #category .header .grid .container .customer-section .cart-section .buy-section .buy-list .buy-item .item-info a.item-name,
+                #cart-page .header .grid .container .customer-section .cart-section .buy-section .buy-list .buy-item .item-info a.item-name {
+                  font-weight: 400;
+                  cursor: pointer;
+                  text-decoration: none;
+                  font-size: 1.44rem;
+                  color: #000000; }
                 #product-page .header .grid .container .customer-section .cart-section .buy-section .buy-list .buy-item .item-info p.item-price,
                 #category .header .grid .container .customer-section .cart-section .buy-section .buy-list .buy-item .item-info p.item-price,
                 #cart-page .header .grid .container .customer-section .cart-section .buy-section .buy-list .buy-item .item-info p.item-price {
                   font-size: 1.4rem;
                   margin-top: 8px;
-                  opacity: 0.8; }
+                  opacity: 0.8;
+                  color: #1C1C1C; }
+                #product-page .header .grid .container .customer-section .cart-section .buy-section .buy-list .buy-item .item-info:hover a.item-name,
+                #category .header .grid .container .customer-section .cart-section .buy-section .buy-list .buy-item .item-info:hover a.item-name,
+                #cart-page .header .grid .container .customer-section .cart-section .buy-section .buy-list .buy-item .item-info:hover a.item-name {
+                  color: #e2ba48; }
               #product-page .header .grid .container .customer-section .cart-section .buy-section .buy-list .buy-item .delete-item,
               #category .header .grid .container .customer-section .cart-section .buy-section .buy-list .buy-item .delete-item,
               #cart-page .header .grid .container .customer-section .cart-section .buy-section .buy-list .buy-item .delete-item {
                 position: absolute;
                 top: 4px;
-                right: 6px; }
+                right: 1px; }
                 #product-page .header .grid .container .customer-section .cart-section .buy-section .buy-list .buy-item .delete-item i,
                 #category .header .grid .container .customer-section .cart-section .buy-section .buy-list .buy-item .delete-item i,
                 #cart-page .header .grid .container .customer-section .cart-section .buy-section .buy-list .buy-item .delete-item i {
@@ -429,10 +488,14 @@ h4 {
           flex-direction: column;
           justify-content: center;
           align-items: center; }
-          #product-page .modal .modalShop-container .buy-list .buy-item .item-info h4.item-name,
-          #category .modal .modalShop-container .buy-list .buy-item .item-info h4.item-name,
-          #cart-page .modal .modalShop-container .buy-list .buy-item .item-info h4.item-name {
-            font-weight: 400; }
+          #product-page .modal .modalShop-container .buy-list .buy-item .item-info .item-name,
+          #category .modal .modalShop-container .buy-list .buy-item .item-info .item-name,
+          #cart-page .modal .modalShop-container .buy-list .buy-item .item-info .item-name {
+            font-weight: 400;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 1.44rem;
+            color: #000000; }
           #product-page .modal .modalShop-container .buy-list .buy-item .item-info p.item-price,
           #category .modal .modalShop-container .buy-list .buy-item .item-info p.item-price,
           #cart-page .modal .modalShop-container .buy-list .buy-item .item-info p.item-price {

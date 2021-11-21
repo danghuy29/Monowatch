@@ -102,9 +102,8 @@
     padding: 0;
     margin-left: 12px; }
   .watch .watch-add-to-cart {
-    top: 40%;
-    display: block;
-    margin-left: 12px; }
+    top: 58%;
+    display: block; }
   .watch:hover {
     border: none; } }
 @media (min-width: 740px) and (max-width: 1023px) {
@@ -121,7 +120,7 @@
     margin-top: 15px;
     margin-left: 12px; }
   .watch .watch-add-to-cart {
-    top: 50%;
+    top: 60%;
     display: block;
     margin-left: 12px; }
   .watch:hover {
